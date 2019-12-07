@@ -30,7 +30,7 @@ RUN pip install -i http://pypi.douban.com/simple --trusted-host pypi.douban.com 
 ENV TZ=Asia/Shanghai
 
 # django 初始化脚本
-RUN chmod +x /uwsgi-django/start.sh
+RUN chmod +x /uwsgi-django/mysite/start.sh
 
 # 对外暴露端口
 EXPOSE 8001
