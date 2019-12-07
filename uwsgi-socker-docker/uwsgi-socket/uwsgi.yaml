@@ -1,0 +1,11 @@
+uwsgi:
+    chdir: /uwsgi-socket
+    wsgi-file: /uwsgi-socket/app.py
+    callable: app
+    master: true
+    pidfile: /tmp/uwsgi-socket.pid
+
+    socket: 127.0.0.1:3031
+    http-timeout: 7200
+
+    processes: 4

@@ -1,0 +1,11 @@
+uwsgi:
+    chdir: /uwsgi-http
+    wsgi-file: /uwsgi-http/app.py
+    callable: app
+    master: true
+    pidfile: /tmp/uwsgi-http.pid
+
+    http: 0.0.0.0:8001
+    http-timeout: 7200
+
+    processes: 4
