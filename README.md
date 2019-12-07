@@ -40,11 +40,30 @@ location / {
 
 展示了uwsgi的三种部署方式
 
+#### uwsgi-http
+```
 docker build . -t uwsgi-http:release
 docker run -p 8001:8001 -d uwsgi-http:release
-
+```
+#### uWSGI-http-socket
+```
 docker build . -t uwsgi-http-socket:release
 docker run -p 8002:8001 -d uwsgi-http-socket:release
-
+```
+#### uWSGI-socket
+```
 docker build . -t uwsgi-socket:release
 docker run -p 8003:8001 -d uwsgi-socket:release
+```
+
+#### uWSGI-Flask
+```
+docker build . -t uwsgi-flask:release
+docker run -p 8004:8001 -d uwsgi-flask:release
+```
+
+#### uWSGI-Django
+```
+docker build . -t uwsgi-django:release
+docker run -p 8005:8001 -d uwsgi-django:release
+```
