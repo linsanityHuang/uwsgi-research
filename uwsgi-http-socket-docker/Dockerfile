@@ -16,13 +16,13 @@ RUN apt-get update && \
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 COPY supervisor-app.conf /etc/supervisor/conf.d/
 
-RUN mkdir /uwsgi-http
+RUN mkdir /uwsgi-http-socket
 
 # 设置工作目录
-WORKDIR /uwsgi-http
+WORKDIR /uwsgi-http-socket
 
 # 将当前目录加入到工作目录中
-ADD ./uwsgi-http /uwsgi-http
+ADD ./uwsgi-http-socket /uwsgi-http-socket
 RUN pip install -i http://pypi.douban.com/simple --trusted-host pypi.douban.com --upgrade pip
 RUN pip install -i http://pypi.douban.com/simple --trusted-host pypi.douban.com -r requirements.txt
 
